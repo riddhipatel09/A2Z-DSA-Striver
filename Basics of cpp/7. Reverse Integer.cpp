@@ -1,3 +1,9 @@
+// https://leetcode.com/problems/reverse-integer/submissions/1032069401/
+// https://takeuforward.org/c-programs/reverse-a-number-in-c/
+
+// Time Complexity: O(n), where n is the length of the given number
+// Space Complexity: O(1)
+
 // RECURSION APPROACH - using INT_MAIN and INT_MAX to check for int overflow condition
 #include <bits/stdc++.h>
 using namespace std;
