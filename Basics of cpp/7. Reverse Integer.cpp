@@ -4,6 +4,30 @@
 // Time Complexity: O(n), where n is the length of the given number
 // Space Complexity: O(1)
 
+// Iterative:
+
+class Solution {
+public:
+    int reverse(int x) {
+        int current = 0;  // Initialize a variable to store the reversed number.
+        
+        while (x) {  // Continue looping until x becomes 0.
+            int lastdigit = x % 10;  // Get the last digit of the current number.
+            x = x / 10;  // Remove the last digit from the current number.
+            
+            // Check for integer overflow/underflow before updating the 'current' value.
+            if (current < INT_MIN / 10 || current > INT_MAX / 10) {
+                return 0;  // Return 0 if reversing causes overflow or underflow.
+            }
+            
+            current = (current * 10) + lastdigit;  // Add the last digit to the reversed number.
+        }
+        
+        return current;  // Return the final reversed number.
+    }
+};
+
+
 // RECURSION APPROACH - using INT_MAIN and INT_MAX to check for int overflow condition
 #include <bits/stdc++.h>
 using namespace std;
