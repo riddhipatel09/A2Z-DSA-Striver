@@ -3,9 +3,9 @@
 
 // Time Complexity: O(n), where n is the length of the given number
 // Space Complexity: O(1)
+// NOTE:  Return 0 in case of integer underflow/overflow
 
-// Iterative:
-
+// Iterative Approach:
 class Solution {
 public:
     int reverse(int x) {
@@ -27,8 +27,7 @@ public:
     }
 };
 
-
-// RECURSION APPROACH - using INT_MAIN and INT_MAX to check for int overflow condition
+// RECURSION APPROACH
 #include <bits/stdc++.h>
 using namespace std;
 
