@@ -29,3 +29,30 @@ int main()
     
     return 0;
 }
+
+
+
+
+
+
+// SECOND SHORT APPROACH
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> v = {1, 2, 3, 4};
+    for (auto &ele : v)
+    { 
+        ele = ele*2;
+    }
+    for(auto ele : v){
+        cout << ele << " ";
+    }
+    
+    return 0;
+}
