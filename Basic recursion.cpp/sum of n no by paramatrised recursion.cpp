@@ -1,4 +1,6 @@
 //paramatrised recursion
+//TC=0(n)
+//SC=0(n)
 
 #include<bits/stdc++.h>
 using namespace std;
