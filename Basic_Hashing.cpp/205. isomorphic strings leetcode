@@ -1,0 +1,25 @@
+Q : https://leetcode.com/problems/isomorphic-strings/?envType=study-plan-v2&envId=top-interview-150
+
+class Solution {
+public:
+    bool isIsomorphic(string s, string t) {
+        unordered_map<char,char>mp1;
+        unordered_map<char,char>mp2;
+    
+        for(int i=0; i<=s.size();i++){
+            
+            char st = s[i];
+            char ts = t[i];
+if(mp1.find(st)!=mp1.end() && mp1[st]!=ts ||
+            mp2.find(ts)!=mp2.end() && mp2[ts]!=st ){
+                return false;
+            }
+            mp1[st] = ts;
+            mp2[ts] = st;
+        }
+        return true;
+    }    
+};
+
+
+------------------------------------------------------------------------------------------>
