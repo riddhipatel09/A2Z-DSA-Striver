@@ -1,0 +1,19 @@
+Q    https://leetcode.com/problems/ransom-note/description/?envType=study-plan-v2&envId=top-interview-150
+
+
+bool canConstruct(string ransomNote, string magazine) {
+        unordered_map<char,int>m;
+
+    for(int i = 0; i<=magazine.size();i++){
+        m[magazine[i]]++;
+    }
+    for(int i = 0; i <=ransomNote.size(); i++){
+        if(m[ransomNote[i]]>0){
+            m[ransomNote[i]]--;
+        }
+        else{
+            return false;
+        }
+    }
+    return true;
+    }
